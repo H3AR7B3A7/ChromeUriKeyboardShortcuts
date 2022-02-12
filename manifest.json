@@ -1,6 +1,6 @@
 {
-    "name": "SomeName",
-    "description": "SomeDescription",
+    "name": "URI Keyboard Shortcuts",
+    "description": "Easily save your favorite URI's to keyboard shortcuts.",
     "version": "1.0.0",
     "manifest_version": 3,
     "background": {
