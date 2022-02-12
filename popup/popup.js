@@ -11,6 +11,12 @@ const url_9_input = document.getElementById('9');
 
 const save_button = document.getElementById('save');
 
+const shortcut_link = document.getElementById('shortcut-link');
+
+shortcut_link.addEventListener('click', () => {
+    chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+});
+
 save_button.addEventListener('click', () => {
     const urls = [
         url_0_input.value,

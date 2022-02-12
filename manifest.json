@@ -39,9 +39,6 @@
             "description": "Navigate to URL 3"
         },
         "url-3": {
-            "suggested_key": {
-                "default": "Ctrl+Shift+4"
-            },
             "description": "Navigate to URL 4"
         },
         "url-4": {
@@ -61,6 +58,14 @@
         },
         "url-9": {
             "description": "Navigate to URL 10"
+        },
+        "_execute_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+K",
+                "mac": "Command+Shift+K",
+                "chromeos": "Ctrl+Shift+K",
+                "linux": "Ctrl+Shift+K"
+            }
         }
     }
 }
