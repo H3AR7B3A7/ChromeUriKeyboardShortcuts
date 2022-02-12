@@ -1,7 +1,18 @@
 chrome.runtime.onInstalled.addListener(() => {
-    const urls = ['https://www.facebook.com/', '', '', '', '', '', '', '', '', ''];
+    const urls = [
+        'https://www.google.com/',
+        'https://www.youtube.com/',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        '',
+        ''
+    ];
     chrome.storage.sync.set({ urls }, () => {
-        console.log("urls set");
+        console.log("Default URI keyboard shortcuts saved!");
     });
 })
 
@@ -13,13 +24,8 @@ chrome.commands.onCommand.addListener((command) => {
     })
 });
 
-// chrome.runtime.onMessage.addListener(
-//     function (request, sender, sendResponse) {
-//         console.log(sender.tab ?
-//             "from a content script:" + sender.tab.url :
-//             "from the extension");
-//         if (request.greeting === "hello")
-//             sendResponse({ farewell: "goodbye" });
-//         console.log(request.greeting)
-//     }
-// );
+chrome.runtime.onMessage.addListener(
+    function (message, sender, sendResponse) {
+        console.log(message)
+    }
+);

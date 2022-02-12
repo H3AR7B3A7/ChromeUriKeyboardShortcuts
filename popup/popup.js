@@ -25,6 +25,9 @@ save_button.addEventListener('click', () => {
         url_9_input.value
     ];
     chrome.storage.sync.set({ urls });
+
+    chrome.runtime.sendMessage("New URI keyboard shortcuts saved!");
+
     window.close();
 });
 
@@ -39,8 +42,6 @@ chrome.storage.sync.get("urls", function (storage) {
     url_7_input.value = storage.urls[7];
     url_8_input.value = storage.urls[8];
     url_9_input.value = storage.urls[9];
-})
 
-// chrome.runtime.sendMessage({ greeting: "hello" }, function (response) {
-//     console.log(response.farewell);
-// });
+    chrome.runtime.sendMessage("URI keyboard shortcuts loaded in popup!");
+})
