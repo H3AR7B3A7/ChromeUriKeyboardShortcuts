@@ -9,6 +9,7 @@
         "48": "img/icon64.png",
         "128": "img/icon128.png"
     },
+    "author": "H3AR7B3A7",
     "background": {
         "service_worker": "background.js"
     },
