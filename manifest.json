@@ -9,6 +9,9 @@
     "permissions": [
         "storage"
     ],
+    "action": {
+        "default_popup": "popup.html"
+    },
     "commands": {
         "url-1": {
             "suggested_key": {
