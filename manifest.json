@@ -2,5 +2,55 @@
     "name": "SomeName",
     "description": "SomeDescription",
     "version": "1.0.0",
-    "manifest_version": 3
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "commands": {
+        "url-1": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+1"
+            },
+            "description": "Navigate to URL 1"
+        },
+        "url-2": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+2"
+            },
+            "description": "Navigate to URL 2"
+        },
+        "url-3": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+3"
+            },
+            "description": "Navigate to URL 3"
+        },
+        "url-4": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+4"
+            },
+            "description": "Navigate to URL 4"
+        },
+        "url-5": {
+            "description": "Navigate to URL 5"
+        },
+        "url-6": {
+            "description": "Navigate to URL 6"
+        },
+        "url-7": {
+            "description": "Navigate to URL 7"
+        },
+        "url-8": {
+            "description": "Navigate to URL 8"
+        },
+        "url-9": {
+            "description": "Navigate to URL 9"
+        },
+        "url-10": {
+            "description": "Navigate to URL 10"
+        }
+    }
 }
