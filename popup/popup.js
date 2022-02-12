@@ -9,6 +9,25 @@ const url_7_input = document.getElementById('7');
 const url_8_input = document.getElementById('8');
 const url_9_input = document.getElementById('9');
 
+const save_button = document.getElementById('save');
+
+save_button.addEventListener('click', () => {
+    const urls = [
+        url_0_input.value,
+        url_1_input.value,
+        url_2_input.value,
+        url_3_input.value,
+        url_4_input.value,
+        url_5_input.value,
+        url_6_input.value,
+        url_7_input.value,
+        url_8_input.value,
+        url_9_input.value
+    ];
+    chrome.storage.sync.set({ urls });
+    window.close();
+});
+
 chrome.storage.sync.get("urls", function (storage) {
     url_0_input.value = storage.urls[0];
     url_1_input.value = storage.urls[1];

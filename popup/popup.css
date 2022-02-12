@@ -1,7 +1,21 @@
 .container {
   width: 300px;
+  text-align: center;
 }
 
 input {
-  width: 100%;
+  width: 95%;
+}
+
+button {
+  width: 50%;
+  color: white;
+  background-color: #3b5998;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #443b98;
 }
