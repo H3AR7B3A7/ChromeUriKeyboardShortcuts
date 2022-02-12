@@ -3,6 +3,11 @@
     "description": "Easily save your favorite URI's to keyboard shortcuts.",
     "version": "1.0.0",
     "manifest_version": 3,
+    "icons": {
+        "16": "img/icon16.png",
+        "32": "img/icon32.png",
+        "128": "img/icon128.png"
+    },
     "background": {
         "service_worker": "background.js"
     },
