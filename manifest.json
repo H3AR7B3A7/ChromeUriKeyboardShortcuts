@@ -1,7 +1,7 @@
 {
     "name": "URI Keyboard Shortcuts",
     "description": "Save URI's to keyboard shortcuts.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest_version": 3,
     "icons": {
         "16": "img/icon16.png",

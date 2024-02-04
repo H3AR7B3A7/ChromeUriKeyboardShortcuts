@@ -51,3 +51,14 @@ chrome.storage.local.get("urls", function (storage) {
 
     chrome.runtime.sendMessage("URI keyboard shortcuts loaded in popup!");
 })
+
+function toggleTheme(isDark) {
+    const body = document.body;
+    body.classList.toggle('dark-theme', isDark);
+}
+
+const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+chrome.storage.sync.get('theme', function (result) {
+    toggleTheme(prefersDarkMode);
+});

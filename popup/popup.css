@@ -1,32 +1,89 @@
+:root {
+    --main-background-color-light: #ffffff;
+    --main-text-color-light: #000000;
+    --main-background-color-dark: #333333;
+    --main-text-color-dark: #ffffff;
+    --button-background-color-light: #2196F3; /* Material Blue for light theme */
+    --button-hover-background-color-light: #1565C0;
+    --button-background-color-dark: #673AB7; /* Material Deep Purple for dark theme */
+    --button-hover-background-color-dark: #512DA8;
+    --link-color-light: #2196F3; /* Material Blue for light theme */
+    --link-hover-color-light: #1565C0;
+    --link-color-dark: #673AB7; /* Material Deep Purple for dark theme */
+    --link-hover-color-dark: #512DA8;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: var(--main-background-color-light);
+    color: var(--main-text-color-light);
+}
+
 .container {
-  width: 300px;
-  text-align: center;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-right {
+    align-items: end;
+}
+
+body.dark-theme {
+    background-color: var(--main-background-color-dark);
+    color: var(--main-text-color-dark);
+}
+
+body.dark-theme input {
+    background-color: var(--main-background-color-dark);
+    color: var(--main-text-color-dark);
 }
 
 input {
-  width: 95%;
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    margin: 3px 0;
+}
+
+input:focus {
+    border-color: var(--button-background-color-light);
 }
 
 button {
-  width: 50%;
-  color: white;
-  background-color: #3b5998;
-  border: none;
-  border-radius: 5px;
-  margin-top: 10px;
+    width: 50%;
+    padding: 10px;
+    color: white;
+    background-color: var(--button-background-color-light);
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #443b98;
-  cursor: pointer;
+    background-color: var(--button-hover-background-color-light);
+    cursor: pointer;
 }
 
 a {
-  color: #3b5998;
-  text-decoration: underline;
+    color: var(--link-color-light);
+    text-decoration: underline;
 }
 
 a:hover {
-  color: #443b98;
-  cursor: pointer;
+    color: var(--link-hover-color-light);
+    cursor: pointer;
+}
+
+span {
+    font-size: 10px;
 }
