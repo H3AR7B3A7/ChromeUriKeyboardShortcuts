@@ -30,14 +30,14 @@ save_button.addEventListener('click', () => {
         url_8_input.value,
         url_9_input.value
     ];
-    chrome.storage.sync.set({ urls });
+    chrome.storage.local.set({ urls });
 
     chrome.runtime.sendMessage("New URI keyboard shortcuts saved!");
 
     window.close();
 });
 
-chrome.storage.sync.get("urls", function (storage) {
+chrome.storage.local.get("urls", function (storage) {
     url_0_input.value = storage.urls[0];
     url_1_input.value = storage.urls[1];
     url_2_input.value = storage.urls[2];
